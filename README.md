@@ -1,16 +1,65 @@
-## Hi there 👋
+## bem vindo ao meu mundo
 
-<!--
-**sinuqueiro/sinuqueiro** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+sou torcedor do são paulo futebol clube
 
-Here are some ideas to get you started:
+sou estudante do jõao cardoso do santos 
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+![](https://media1.tenor.com/m/duzc65T041UAAAAC/ronaldo-al-nassr-alnassr.gif)
+
+//variaveis da bolinha
+let xBolinha = 100;
+let yBolinha = 200;
+let diametro = 20;
+let raio = diametro / 2;
+
+//variaveis do oponente 
+ let xRaqueteOponente = 585;
+ let yRaqueteOponente = 150;
+
+//velocidade da bolinha
+let velocidadeXBolinha = 6;
+let velocidadeYBolinha = 6;
+
+ //variáveis da raquete
+let xRaquete = 5 
+let yRaquete =150;
+let raqueteComprimento = 10;
+let raqueteAltura = 90;
+
+//placar do jogo 
+ let meusPontos = 0;
+ let pontosDoOponente = 0;
+ let colidiu = false;
+
+    function setup() {
+  createCanvas(600, 400);
+}
+
+function draw() {
+  background(0);
+  mostraBolinha();
+  movimentaBolinha();
+  verificaColisaoBorda();
+  mostrtaRaquete(xRaquete, yRaquete);
+  movimentaMinhaRaquete();
+  rect (5,150,10,90);
+  
+}
+
+
+function mostraBolinha(){
+  circle(xBolinha,yBolinha,diametro);
+}
+
+function movimentaBolinha(){
+  xBolinha += velocidadeXBolinha;
+  yBolinha += velocidadeYBolinha;
+}
+
+function verificaColisaoBorda(){
+   if(xBolinha + raio > width || xBolinha - raio < 0){
+      velocidadeXBolinha *= -1;
+  }
+  if(yBolinha + raio > height || yBolinha - raio < 0){
+      velocidadeYBolinha *= -1;
+  }
