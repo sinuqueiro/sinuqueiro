@@ -1,6 +1,4 @@
-## bem vindo ao meu mundo
 
-sou torcedor do são paulo futebol clube
 
 sou estudante do jõao cardoso do santos 
 
